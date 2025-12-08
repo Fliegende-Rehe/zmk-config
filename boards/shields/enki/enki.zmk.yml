@@ -1,0 +1,11 @@
+file_format: "1"
+id: enki
+name: enki
+type: shield
+url: https://github.com/aroum/proXiao/
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - enki_left
+  - enki_right

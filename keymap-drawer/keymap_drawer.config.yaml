@@ -1,0 +1,439 @@
+# configuration for https://github.com/caksoylar/keymap-drawer
+draw_config:
+  dark_mode: true
+  append_colon_to_layer_header: true
+  shrink_wide_legends: 6
+
+  combo_w: 30.0
+  combo_h: 32.0
+  glyph_tap_size: 18
+  glyph_hold_size: 15
+  glyph_shifted_size: 15
+
+  # https://pictogrammers.com/library/mdi/
+  # https://fonts.google.com/icons
+  glyph_urls:
+    tabler: https://cdn.jsdelivr.net/npm/@tabler/icons@2.46.0/icons/{}.svg
+    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
+    mdil: https://raw.githubusercontent.com/Pictogrammers/MaterialDesignLight/master/svg/{}.svg
+    material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
+
+  # https://github.com/zambo/zmk-config/blob/47eaa53e306bc38449755319085d9456830d98a0/customization.md
+  svg_extra_style: |
+    .tap { font-size: 14px; }
+    .hold { font-size: 14px; }
+    .shifted { font-size: 14px; }
+
+    @media (prefers-color-scheme: dark) {
+      svg.keymap {
+        --color-bg: #2e3440;
+        --color-text: #d8dee9;
+      }
+    }
+
+    .sym_by_sym.tap {
+      translate: -10px 0px;
+    }
+
+    .sym_by_sym.shifted {
+      translate: 10px 17px;
+      font-size: 13px;
+    }
+    
+    .combo.sym_by_sym.tap {
+      translate: 0px 0px;
+    }
+
+    .combo.sym_by_sym.hold {
+      visibility: hidden;
+    }
+
+    .combo.sym_by_sym.shifted {
+      visibility: hidden;
+    }
+
+parse_config:
+  zmk_additional_includes: ["zmk-helpers/include"] # git clone zmk-helpers in zmk-config dir to parse locally
+  preprocess: true
+  skip_binding_parsing: false
+
+  # layer_legend_map:
+  #   "nav": "NAV"
+  #   "num": "NUM"
+  #   "game": "GAME"
+  #   "mouse": "MOUSE"
+  #   "sys": "SYS"
+  #   "media": "MEDIA"
+
+  # --- Behaviours defaults ---
+  sticky_label: $$mdi:clock-fast$$
+  toggle_label: $$mdi:toggle-switch$$
+  momentary_label: $$mdi:clock-fast$$
+  trans_legend:
+    type: held
+    # t: $$mdi:fingerprint$$
+
+  zmk_keycode_map:
+    # --- Combinations ---
+    LC(X): $$mdi:content-cut$$
+    LC(C): $$mdi:content-copy$$
+    LC(V): $$mdi:content-paste$$
+    LC(A): $$mdi:select-all$$
+    LC(MINUS): $$mdi:magnify-minus$$
+    LC(EQUAL): $$mdi:magnify-plus$$
+    LC(BACKSPACE): $$mdi:backspace$$
+    LC(DELETE): $$mdi:backspace-reverse$$
+    LC(BSPC): $$mdi:backspace$$
+    LC(DEL): $$mdi:backspace-reverse$$
+    LC(UP): $$mdi:arrow-up-thick$$
+    LC(DOWN): $$mdi:arrow-down-thick$$
+    LC(LEFT): $$mdi:arrow-left-thick$$
+    LC(RIGHT): $$mdi:arrow-right-thick$$
+    LG(L): $$mdi:power-sleep$$
+    LC(LS(ESC)): $$mdi:file-tree$$
+    LC(LA(DOWN)):
+      tap: $$mdi:headphones$$
+      shifted: $$mdi:volume-minus$$
+      type: sym_by_sym
+    LC(LA(UP)):
+      tap: $$mdi:headphones$$
+      shifted: $$mdi:volume-plus$$
+      type: sym_by_sym
+    
+    LA(F4): $$mdi:close-box-multiple$$
+    # LS(LALT): $$mdi:earth$$
+    LS(LG(LEFT)): $$mdi:dock-left$$
+    LS(LG(RIGHT)): $$mdi:dock-right$$
+    LS(LG(S)): $$mdi:monitor-screenshot$$
+    LC(LS(M)): $$mdi:microphone-off$$
+    LC(LS(D)): $$mdi:headset-off$$
+
+    # --- Navigation keys ---
+    UP: $$mdi:arrow-up$$
+    DOWN: $$mdi:arrow-down$$
+    LEFT: $$mdi:arrow-left$$
+    RIGHT: $$mdi:arrow-right$$
+    RETURN: $$mdi:keyboard-return$$
+    ENTER: $$mdi:keyboard-return$$
+    RET: $$mdi:keyboard-return$$
+    TAB: $$mdi:keyboard-tab$$
+    ESC: "ESC"
+    SPACE: $$mdi:keyboard-space$$
+    BACKSPACE: $$mdi:backspace-outline$$
+    DELETE: $$mdi:backspace-reverse-outline$$
+    BSPC: $$mdi:backspace-outline$$
+    DEL: $$mdi:backspace-reverse-outline$$
+
+    # --- Media controls ---
+    C_PP: $$mdi:play-pause$$
+    C_NEXT: $$mdi:skip-forward$$
+    C_PREV: $$mdi:skip-backward$$
+    C_MUTE: $$mdi:volume-mute$$
+    C_VOL_UP: $$mdi:volume-plus$$
+    C_VOL_DN: $$mdi:volume-minus$$
+    C_POWER: $$mdi:power$$
+    C_PWR: $$mdi:power$$
+    C_SLEEP: $$mdi:power-sleep$$
+    C_RESET: $$mdi:restart$$
+
+    # --- Modifiers ---
+    LEFT_GUI: $$mdi:apple-keyboard-command$$
+    RIGHT_GUI: $$mdi:apple-keyboard-command$$
+    LEFT_ALT: $$mdi:apple-keyboard-option$$
+    RIGHT_ALT: $$mdi:apple-keyboard-option$$
+    LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
+    RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
+    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
+    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    LALT: $$mdi:apple-keyboard-option$$
+    RALT: $$mdi:apple-keyboard-option$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LS: $$mdi:apple-keyboard-shift$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LC: $$mdi:apple-keyboard-control$$
+
+    # --- Symbols (Shifted Numbers) ---
+    EXCL: "!"
+    PRCNT: "%"
+    STAR: "*"
+    LPAR: "("
+    RPAR: ")"
+    AT: "@"
+    HASH: "#"
+    DLLR: "$"
+    CARET: "^"
+    AMPS: "&"
+    EQUAL: "="
+    PLUS: "+"
+    MINUS: "-"
+    UNDERSCORE: "_"
+    UNDER: "_"
+    SLASH: "/"
+    FSLH: "/"
+    QUESTION: "?"
+    BACKSLASH: '\'
+    BSLH: '\'
+    PIPE: "|"
+    SEMICOLON: ";"
+    SEMI: ";"
+    COLON: ":"
+    SQT: "'"
+    DQT: '"'
+    COMMA: ","
+    DOT: "."
+    LESS_THAN: "<"
+    GREATER_THAN: ">"
+    GRAVE: "`"
+    TILDE: "~"
+    QMARK: "?"
+    EXCL: "!"
+    LT: "<"
+    GT: ">"
+
+    # --- Brackets and braces ---
+    LEFT_BRACKET: "["
+    RIGHT_BRACKET: "]"
+    LEFT_BRACE: "{"
+    RIGHT_BRACE: "}"
+    LBKT: "["
+    RBKT: "]"
+    LBRC: "{"
+    RBRC: "}"
+
+    # --- System / misc ---
+    KP_NUMLOCK: "NumLock"
+    KP_NUM: "NUM"
+    C_MENU: "MENU"
+    HOME: "HOME"
+    INSERT: "INS"
+    END: "END"
+    PAGE_UP: "PgUp"
+    PAGE_DOWN: "PgDn"
+    CAPS: $$mdi:apple-keyboard-caps$$
+
+    # --- QWERTY legend ---
+    Q: "q"
+    W: "w"
+    E: "e"
+    R: "r"
+    T: "t"
+    Y: "y"
+    U: "u"
+    I: "i"
+    O: "o"
+    P: "p"
+    A: "a"
+    S: "s"
+    D: "d"
+    F: "f"
+    G: "g"
+    H: "h"
+    J: "j"
+    K: "k"
+    L: "l"
+    Z: "z"
+    X: "x"
+    C: "c"
+    V: "v"
+    B: "b"
+    N: "n"
+    M: "m"
+
+  raw_binding_map:
+    # --- Rus Legend Unicodes ---
+    "&ru_a": "а"
+    "&ru_b": "б"
+    "&ru_v": "в"
+    "&ru_g": "г"
+    "&ru_d": "д"
+    "&ru_ye": "е"
+    "&ru_yo": "ё"
+    "&ru_zh": "ж"
+    "&ru_z": "з"
+    "&ru_i": "и"
+    "&ru_y": "й"
+    "&ru_k": "к"
+    "&ru_l": "л"
+    "&ru_m": "м"
+    "&ru_n": "н"
+    "&ru_o": "о"
+    "&ru_p": "п"
+    "&ru_r": "р"
+    "&ru_s": "с"
+    "&ru_t": "т"
+    "&ru_u": "у"
+    "&ru_f": "ф"
+    "&ru_kh": "х"
+    "&ru_ts": "ц"
+    "&ru_ch": "ч"
+    "&ru_sh": "ш"
+    "&ru_shch": "щ"
+    "&ru_hard": "ъ"
+    "&ru_bi": "ы"
+    "&ru_soft": "ь"
+    "&ru_e": "э"
+    "&ru_yu": "ю"
+    "&ru_ya": "я"
+
+    # --- Tap dances ---
+    "&f1_f11":
+      tap: "F1"
+      shifted: "F11"
+      type: sym_by_sym
+      hold: $$mdi:gesture-double-tap$$
+
+    "&f2_f12":
+      tap: "F2"
+      shifted: "F12"
+      type: sym_by_sym
+      hold: $$mdi:gesture-double-tap$$
+    
+    "&tog_dance": 
+      tap: "BASE"
+      hold: $$mdi:gesture-double-tap$$
+
+    # --- Macros ---
+    "&bkts": "[]"
+    "&pars": "()"
+    "&lgts": "<>"
+    "&graves": "```"
+    "&minus_equal": "-="
+    "&plus_equal": "+="
+    "&uc_dim": $$mdi:diameter-variant$$
+    "&uc_deg": $$mdi:temperature-celsius$$
+
+    # --- Mouse controls ---
+    "&mkp LCLK": $$mdi:mouse-left-click-outline$$
+    "&mkp RCLK": $$mdi:mouse-right-click-outline$$
+    "&mkp MCLK": $$mdi:mouse-scroll-wheel$$
+    "&mkp MB4": $$mdi:page-previous$$
+    "&mkp MB5": $$mdi:page-next$$
+
+    # --- Mouse movement ---
+    "&mmv MOVE_LEFT":
+      tap: $$mdi:mouse$$
+      shifted: $$mdi:arrow-left$$
+      type: sym_by_sym
+    "&mmv MOVE_RIGHT":
+      tap: $$mdi:mouse$$
+      shifted: $$mdi:arrow-right$$
+      type: sym_by_sym
+    "&mmv MOVE_UP":
+      tap: $$mdi:mouse$$
+      shifted: $$mdi:arrow-up$$
+      type: sym_by_sym
+    "&mmv MOVE_DOWN":
+      tap: $$mdi:mouse$$
+      shifted: $$mdi:arrow-down$$
+      type: sym_by_sym
+
+    # --- Mouse scroll ---
+    "&msc SCRL_UP":
+      tap: $$mdi:wheelchair$$
+      shifted: $$mdi:arrow-up$$
+      type: sym_by_sym
+    "&msc SCRL_DOWN":
+      tap: $$mdi:wheelchair$$
+      shifted: $$mdi:arrow-down$$
+      type: sym_by_sym
+    "&msc SCRL_RIGHT":
+      tap: $$mdi:wheelchair$$
+      shifted: $$mdi:arrow-right$$
+      type: sym_by_sym
+    "&msc SCRL_LEFT":
+      tap: $$mdi:wheelchair$$
+      shifted: $$mdi:arrow-left$$
+      type: sym_by_sym
+
+    # --- Bluetooth control ---
+    "&bt BT_CLR":
+      tap: $$mdi:bluetooth$$
+      shifted: $$mdi:close-thick$$
+      type: sym_by_sym
+    "&bt BT_SEL 0":
+      tap: $$mdi:bluetooth$$
+      shifted: $$mdi:desktop-tower-monitor$$
+      type: sym_by_sym
+    "&bt BT_SEL 1":
+      tap: $$mdi:bluetooth$$
+      shifted: $$mdi:laptop$$
+      type: sym_by_sym
+
+    # --- System and boot ---
+    "&bootloader": $$mdi:usb-flash-drive-outline$$
+    "&studio_unlock": $$mdi:android-studio$$
+    "&win_sleep": $$mdi:sleep$$
+    "&sys_reset": $$mdi:sleep$$
+
+    "&tog RU": $$mdi:earth$$
+    "&tog GAME": $$mdi:gamepad-variant$$
+    "&tog MOUSE": $$mdi:mouse$$
+    "&tog SYS": $$mdi:cog-outline$$
+    "&rgb_tog_dis_base": "DIS"
+    "&rgb_tog_sys_base": "SYS"
+    
+    # --- RGB ---
+    "&rgb_ug RGB_TOG": $$mdi:lightbulb-off-outline$$
+    "&rgb_ug RGB_BRI":
+      tap: $$mdi:lightbulb-on-outline$$
+      shifted: $$mdi:arrow-up$$
+      type: sym_by_sym
+    "&rgb_ug RGB_BRD":
+      tap: $$mdi:lightbulb-on-outline$$
+      shifted: $$mdi:arrow-down$$
+      type: sym_by_sym
+    "&rgb_ug RGB_EFF":
+      tap: $$mdi:lightbulb-on-outline$$
+      shifted: $$mdi:animation$$
+      type: sym_by_sym
+
+  # draw_separate: true
+  # hidden: true
+  zmk_combos:
+    combo_mclk:
+      align: bottom
+      o: 0.25
+
+    combo_language_tog:
+      align: bottom 
+      o: 0.5
+
+    combo_game_tog_34:
+      align: bottom
+      o: 1.75
+
+    combo_cmb_rsystog:
+      align: top
+      o: 1.25
+
+    combo_cmb_lsystog:
+      align: top
+      o: 1.25
+      
+    combo_cmb_base:
+      align: top
+      o: 0.4
+    combo_cmb_sys:
+      align: top
+      o: 0.4
+    combo_cmb_dis:
+      align: top
+      o: 0.4
+    combo_cmb_lm3:
+      type: sym_by_sym
+    combo_cmb_lm2:
+      type: sym_by_sym
+    combo_cmb_lm1:
+      type: sym_by_sym
+    combo_cmb_rm1:
+      type: sym_by_sym
+    combo_cmb_rm2:
+      type: sym_by_sym
+    combo_cmb_rm3:
+      type: sym_by_sym
+      

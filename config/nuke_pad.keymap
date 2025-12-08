@@ -1,0 +1,64 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <zmk-helpers/helper.h>
+
+#define BASE      0
+#define DIS       1
+#define SYS       2 
+  
+#define DIS_MUTE     LC(LS(M))
+#define DIS_DEAF     LC(LS(D))
+#define DIS_VOL_DN   LC(LA(DOWN))
+#define DIS_VOL_UP   LC(LA(UP))
+
+#define BASE_HUE    120 // #40FF40FF
+#define DIS_HUE     240 // #4040FFFF
+#define SYS_HUE     300 // #FF40FFFF
+
+#define BASE_SAT     75  
+#define BASE_BRT     15
+
+#define MAKE_RGB_TOG(NAME, LAYER, TAR_HUE, COMBO)                                                     \
+    ZMK_MACRO(rgb_tog_##NAME##_base,                                                                   \
+        bindings = <&tog LAYER &rgb_ug RGB_COLOR_HSB(BASE_HUE, BASE_SAT, BASE_BRT)>;                    \
+    )                                                                                                    \
+    ZMK_MACRO(rgb_tog_##NAME,                                                                             \
+        bindings = <&tog LAYER &rgb_ug RGB_COLOR_HSB(TAR_HUE, BASE_SAT, BASE_BRT)>;                        \
+    )                                                                                                       \
+    ZMK_COMBO(cmb_##NAME, COMBO, 2 3, LAYER)                                                                 \
+
+
+MAKE_RGB_TOG(dis,  DIS,  DIS_HUE, &kp LA(F4)) 
+MAKE_RGB_TOG(sys,  SYS,  SYS_HUE, &bootloader) 
+ZMK_COMBO(cmb_base, &kp C_PP, 2 3, BASE)
+ZMK_TAP_DANCE(tog_dance, bindings = <&rgb_tog_dis>, <&rgb_tog_sys>;)
+
+
+/ {
+    behaviors {
+        rot_rgb: rotary_brightness {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+        };
+    };
+};
+
+ZMK_LAYER(base,
+    &kp C_PWR         &kp C_RESET         &kp LEFT            &kp RIGHT             &tog_dance                     &kp C_VOL_DN       &kp C_VOL_UP, 
+
+    &inc_dec_kp C_VOL_DN C_VOL_UP       
+)       
+       
+ZMK_LAYER(discord,       
+    &kp C_PWR         &kp C_RESET         &kp DIS_MUTE          &kp  DIS_DEAF        &rgb_tog_dis_base              &kp DIS_VOL_DN     &kp DIS_VOL_UP,
+
+    &inc_dec_kp DIS_VOL_DN DIS_VOL_UP       
+)       
+       
+ZMK_LAYER(sys,       
+    &kp C_PWR         &kp C_RESET         &rgb_ug RGB_TOG       &rgb_ug RGB_EFF      &rgb_tog_sys_base              &rgb_ug RGB_BRD    &rgb_ug RGB_BRI,
+
+    &rot_rgb
+)

@@ -1,0 +1,42 @@
+﻿layout: {zmk_keyboard: nuke_pad}
+layers:
+  base:
+  - $$mdi:power$$
+  - $$mdi:restart$$
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-right$$
+  - {t: BASE, h: '$$mdi:gesture-double-tap$$'}
+  - $$mdi:volume-minus$$
+  - $$mdi:volume-plus$$
+  discord:
+  - $$mdi:power$$
+  - $$mdi:restart$$
+  - $$mdi:microphone-off$$
+  - $$mdi:headset-off$$
+  - DIS
+  - {t: '$$mdi:headphones$$', s: '$$mdi:volume-minus$$', type: sym_by_sym}
+  - {t: '$$mdi:headphones$$', s: '$$mdi:volume-plus$$', type: sym_by_sym}
+  sys:
+  - $$mdi:power$$
+  - $$mdi:restart$$
+  - $$mdi:lightbulb-off-outline$$
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:animation$$', type: sym_by_sym}
+  - SYS
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+combos:
+- p: [2, 3]
+  k: $$mdi:close-box-multiple$$
+  l: [discord]
+  a: top
+  o: 0.4
+- p: [2, 3]
+  k: $$mdi:usb-flash-drive-outline$$
+  l: [sys]
+  a: top
+  o: 0.4
+- p: [2, 3]
+  k: $$mdi:play-pause$$
+  l: [base]
+  a: top
+  o: 0.4

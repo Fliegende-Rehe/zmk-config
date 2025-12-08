@@ -1,0 +1,35 @@
+manifest:
+  defaults:
+    revision: main
+    remote: urob
+
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
+
+    - name: urob
+      url-base: https://github.com/urob
+
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      import: app/west.yml
+
+    - name: zmk-helpers
+    - name: zmk-unicode
+    - name: zmk-tri-state
+
+    - name: zmk-dongle-screen
+      remote: janpfischer
+
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+
+  self:
+    path: config

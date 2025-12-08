@@ -1,0 +1,11 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_CHONKY_BOIS_LEFT
+    def_bool $(shields_list_contains,chonky_bois_left)
+
+config SHIELD_CHONKY_BOIS_RIGHT
+    def_bool $(shields_list_contains,chonky_bois_right)
+
+config SHIELD_CHONKY_BOIS_DONGLE
+    def_bool $(shields_list_contains,chonky_bois_dongle)
