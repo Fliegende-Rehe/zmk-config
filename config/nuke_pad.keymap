@@ -31,7 +31,7 @@
 
 MAKE_RGB_TOG(dis,  DIS,  DIS_HUE, &kp LA(F4)) 
 MAKE_RGB_TOG(sys,  SYS,  SYS_HUE, &bootloader) 
-ZMK_COMBO(cmb_base, &kp C_PP, 2 3, BASE)
+// ZMK_COMBO(cmb_base, &kp C_PP, 2 3, BASE)
 ZMK_TAP_DANCE(tog_dance, bindings = <&rgb_tog_dis>, <&rgb_tog_sys>;)
 
 
@@ -41,6 +41,15 @@ ZMK_TAP_DANCE(tog_dance, bindings = <&rgb_tog_dis>, <&rgb_tog_sys>;)
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+        cmb_base {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp C_PP>;
+            layers = <BASE>;
         };
     };
 };

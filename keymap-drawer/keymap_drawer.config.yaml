@@ -415,7 +415,7 @@ parse_config:
       align: top
       o: 1.25
       
-    combo_cmb_base:
+    cmb_base:
       align: top
       o: 0.4
     combo_cmb_sys:
@@ -424,6 +424,7 @@ parse_config:
     combo_cmb_dis:
       align: top
       o: 0.4
+
     combo_cmb_lm3:
       type: sym_by_sym
     combo_cmb_lm2:
