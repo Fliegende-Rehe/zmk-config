@@ -6,18 +6,20 @@
 #define BASE      0
 #define DIS       1
 #define SYS       2 
-  
+
+#define COMBO_POS 2 3
+
 #define DIS_MUTE     LC(LS(M))
 #define DIS_DEAF     LC(LS(D))
 #define DIS_VOL_DN   LC(LA(DOWN))
 #define DIS_VOL_UP   LC(LA(UP))
 
-#define BASE_HUE    120 // #40FF40FF
-#define DIS_HUE     240 // #4040FFFF
+#define BASE_HUE    100 // #55ff00
+#define DIS_HUE     190 // #00d5ff
 #define SYS_HUE     300 // #FF40FFFF
 
 #define BASE_SAT     75  
-#define BASE_BRT     15
+#define BASE_BRT     25
 
 #define MAKE_RGB_TOG(NAME, LAYER, TAR_HUE, COMBO)                                                     \
     ZMK_MACRO(rgb_tog_##NAME##_base,                                                                   \
@@ -26,12 +28,12 @@
     ZMK_MACRO(rgb_tog_##NAME,                                                                             \
         bindings = <&tog LAYER &rgb_ug RGB_COLOR_HSB(TAR_HUE, BASE_SAT, BASE_BRT)>;                        \
     )                                                                                                       \
-    ZMK_COMBO(cmb_##NAME, COMBO, 2 3, LAYER)                                                                 \
+    ZMK_COMBO(cmb_##NAME, COMBO, COMBO_POS, LAYER)                                                           \
 
 
 MAKE_RGB_TOG(dis,  DIS,  DIS_HUE, &kp LA(F4)) 
 MAKE_RGB_TOG(sys,  SYS,  SYS_HUE, &bootloader) 
-// ZMK_COMBO(cmb_base, &kp C_PP, 2 3, BASE)
+ZMK_COMBO(cmb_base, &kp C_PP, COMBO_POS, BASE)
 ZMK_TAP_DANCE(tog_dance, bindings = <&rgb_tog_dis>, <&rgb_tog_sys>;)
 
 
@@ -41,15 +43,6 @@ ZMK_TAP_DANCE(tog_dance, bindings = <&rgb_tog_dis>, <&rgb_tog_sys>;)
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
-        cmb_base {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp C_PP>;
-            layers = <BASE>;
         };
     };
 };
