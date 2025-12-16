@@ -11,11 +11,12 @@ include:
   # ----------------------------- nuke_pad --------------------------
   - board: nice_nano_v2
     shield: nuke_pad
+    artifact-name: nuke-pad/nuke-pad
 
   # ----------------------------- enki42 ---------------------------
   - board: seeeduino_xiao_ble
     shield: enki_left led_indicator
-    snippet: common-config studio-rpc-usb-uart
+    snippet: common-config
     artifact-name: enki/enki-left
 
   - board: seeeduino_xiao_ble
@@ -26,7 +27,7 @@ include:
   # ----------------------------- totem38 ----------------------------
   - board: seeeduino_xiao_ble
     shield: totem_left led_indicator
-    snippet: common-config studio-rpc-usb-uart
+    snippet: common-config
     artifact-name: totem/totem-left
 
   - board: seeeduino_xiao_ble
@@ -37,13 +38,22 @@ include:
   # ----------------------------- chonky34 ----------------------------
   - board: nice_nano_v2
     shield: chonky_bois_left led_indicator
-    snippet: common-config studio-rpc-usb-uart
+    snippet: common-config
     artifact-name: chonky/chonky-left
 
   - board: nice_nano_v2
     shield: chonky_bois_right led_indicator
     snippet: common-config
     artifact-name: chonky/chonky-right
+
+    # ----------------------------- sofle58 ----------------------------
+  - board: nice_nano_v2
+    shield: sofle_left
+    artifact-name: sofle/sofle-left
+
+  - board: nice_nano_v2
+    shield: sofle_right
+    artifact-name: sofle/sofle-right
 
   # ----------------------------- enki42 dongle -----------------------
   - board: seeeduino_xiao_ble

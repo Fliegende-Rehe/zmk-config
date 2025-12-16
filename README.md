@@ -16,6 +16,6 @@
 
 ![enki logo](keymap-drawer/svg/enki.svg)
 
-<!-- ## [Sofle V2 RGB](https://github.com/josefadamcik/SofleKeyboard)
+## [Sofle V2 RGB](https://github.com/josefadamcik/SofleKeyboard)
 
-![chonky keymap](keymap-drawer/svg/sofle.svg) -->
+![chonky keymap](keymap-drawer/svg/sofle.svg)

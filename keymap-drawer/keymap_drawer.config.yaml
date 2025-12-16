@@ -292,7 +292,13 @@ parse_config:
       shifted: "F12"
       type: sym_by_sym
       hold: $$mdi:gesture-double-tap$$
-    
+
+    "&slash_backslash":
+      tap: "/"
+      shifted: '\'
+      type: sym_by_sym
+      hold: $$mdi:gesture-double-tap$$
+
     "&tog_dance": 
       tap: "BASE"
       hold: $$mdi:gesture-double-tap$$
@@ -376,6 +382,7 @@ parse_config:
     "&tog SYS": $$mdi:cog-outline$$
     "&rgb_tog_dis_base": "DIS"
     "&rgb_tog_sys_base": "SYS"
+    "&ext_power EP_TOG": $$mdi:power-plug-battery$$
     
     # --- RGB ---
     "&rgb_ug RGB_TOG": $$mdi:lightbulb-off-outline$$
@@ -415,7 +422,7 @@ parse_config:
       align: top
       o: 1.25
       
-    cmb_base:
+    combo_cmb_base:
       align: top
       o: 0.4
     combo_cmb_sys:
@@ -438,3 +445,7 @@ parse_config:
     combo_cmb_rm3:
       type: sym_by_sym
       
+    r_esc:
+      align: bottom
+    l_esc:
+      align: bottom

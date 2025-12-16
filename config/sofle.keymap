@@ -98,7 +98,7 @@
 &kp TAB         &kp Q   &kp W     &kp E    &kp R         &kp T                                     &kp Y          &kp U         &kp I      &kp O      &kp P             &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &kp A   &kp S     &kp D    &kp F         &kp G                                     &kp H          &kp J         &kp K      &kp L      &kp SEMI          &kp SQT
 &kp LCTRL       &kp Z   &kp X     &kp C    &kp V         &kp B    &kp C_MUTE     &kp C_PP  &kp N          &kp M         &kp COMMA  &kp DOT    &slash_backslash  &mt RSHFT LEFT_BRACKET
-                        &kp HOME  &kp END  &kp LEFT_ALT  &kp DEL  &lt 1 SPACE    &lt 1 ENTER       &kp BACKSPACE  &kp LEFT_GUI  &kp MINUS  &kp EQUAL
+                        &kp HOME  &kp END  &kp LALT      &kp DEL  &lt 1 SPACE    &lt 1 ENTER       &kp BACKSPACE  &kp RALT  &kp MINUS  &kp EQUAL
             >;
 
             sensor-bindings =
@@ -113,7 +113,7 @@
 &kp INSERT  &none           &kp LC(MINUS)   &kp UP    &kp LC(EQUAL)  &none                     &none   &kp LS(LG(LEFT))  &kp UP          &kp LS(LG(RIGHT))  &none    &kp KP_NUM
 &kp CAPS    &none           &kp LEFT        &kp DOWN  &kp RIGHT      &none                     &none   &mt LCTRL LEFT    &mt LSHFT DOWN  &mt RALT RIGHT     &none    &kp C_MENU
 &tog ADJ    &none           &none           &none     &none          &none   &none     &none   &none   &none             &none                 &none              &none    &tog ADJ
-                            &none           &none     &none          &none   &trans    &trans  &none   &none             &none                 &none
+                            &none           &none     &kp LGUI       &none   &trans    &trans  &none   &kp RGUI          &none                 &none
             >;
         };
 
