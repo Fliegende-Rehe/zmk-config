@@ -1,0 +1,11 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_SCOLIOSIS_LEFT
+    def_bool $(shields_list_contains,SCOLIOSIS_left)
+
+config SHIELD_SCOLIOSIS_RIGHT
+    def_bool $(shields_list_contains,SCOLIOSIS_right)
+
+config SHIELD_SCOLIOSIS_DONGLE
+    def_bool $(shields_list_contains,SCOLIOSIS_dongle)

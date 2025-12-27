@@ -24,6 +24,17 @@ include:
     snippet: common-config
     artifact-name: enki/enki-right
 
+  # ----------------------------- scoliosis42 ---------------------------
+  - board: nice_nano_v2
+    shield: scoliosis_left led_indicator
+    snippet: common-config
+    artifact-name: scoliosis/scoliosis-left
+
+  - board: nice_nano_v2
+    shield: scoliosis_right led_indicator
+    snippet: common-config
+    artifact-name: scoliosis/scoliosis-right
+
   # ----------------------------- totem38 ----------------------------
   - board: seeeduino_xiao_ble
     shield: totem_left led_indicator

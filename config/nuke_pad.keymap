@@ -15,7 +15,7 @@
 #define DIS_VOL_UP   LC(LA(UP))
 
 #define BASE_HUE    200 // #00d5ff
-#define DIS_HUE     150 // #00A86B
+#define DIS_HUE     120 // #00A86B
 #define SYS_HUE     300 // #FF40FFFF
 
 #define BASE_SAT     75  
