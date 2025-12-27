@@ -27,7 +27,7 @@
             , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;    
     };
-q t w esc r e
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
