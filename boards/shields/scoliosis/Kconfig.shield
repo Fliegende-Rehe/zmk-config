@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_SCOLIOSIS_LEFT
-    def_bool $(shields_list_contains,SCOLIOSIS_left)
+    def_bool $(shields_list_contains,scoliosis_left)
 
 config SHIELD_SCOLIOSIS_RIGHT
-    def_bool $(shields_list_contains,SCOLIOSIS_right)
+    def_bool $(shields_list_contains,scoliosis_right)
 
 config SHIELD_SCOLIOSIS_DONGLE
-    def_bool $(shields_list_contains,SCOLIOSIS_dongle)
+    def_bool $(shields_list_contains,scoliosis_dongle)
