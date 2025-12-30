@@ -53,7 +53,6 @@ draw_config:
     }
 
 parse_config:
-  zmk_additional_includes: ["zmk-helpers/include"] # git clone zmk-helpers in zmk-config dir to parse locally
   preprocess: true
   skip_binding_parsing: false
 
@@ -402,50 +401,6 @@ parse_config:
   # draw_separate: true
   # hidden: true
   zmk_combos:
-    combo_mclk:
-      align: bottom
-      o: 0.25
-
     combo_language_tog:
       align: bottom 
       o: 0.5
-
-    combo_game_tog_34:
-      align: bottom
-      o: 1.75
-
-    combo_cmb_rsystog:
-      align: top
-      o: 1.25
-
-    combo_cmb_lsystog:
-      align: top
-      o: 1.25
-      
-    combo_cmb_base:
-      align: top
-      o: 0.4
-    combo_cmb_sys:
-      align: top
-      o: 0.4
-    combo_cmb_dis:
-      align: top
-      o: 0.4
-
-    combo_cmb_lm3:
-      type: sym_by_sym
-    combo_cmb_lm2:
-      type: sym_by_sym
-    combo_cmb_lm1:
-      type: sym_by_sym
-    combo_cmb_rm1:
-      type: sym_by_sym
-    combo_cmb_rm2:
-      type: sym_by_sym
-    combo_cmb_rm3:
-      type: sym_by_sym
-      
-    r_esc:
-      align: bottom
-    l_esc:
-      align: bottom

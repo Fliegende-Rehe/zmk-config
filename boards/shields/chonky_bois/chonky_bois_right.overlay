@@ -1,5 +1,0 @@
-#include "chonky_bois.dtsi"
-
-&default_transform {
-    col-offset = <5>;
-};

@@ -1,8 +1,0 @@
-file_format: "1"
-id: nuke_pad
-name: NUKE_PAD
-type: shield
-url: https://github.com/Fliegende-Rehe/nuke_pad
-requires: [nice_nano_v2]
-features:
-  - keys

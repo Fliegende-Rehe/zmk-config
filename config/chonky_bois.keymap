@@ -1,9 +1,0 @@
-
-#include <zmk-helpers/key-labels/34.h>
-#include "base.keymap"
-
-// extra combos for 34 layout
-MIRROR_COMBO(esc_34,        &kp ESC,           T3, T4,    SYM_COMBOS_LAYERS GAME)
-MIRROR_COMBO(b2_34,         &ru_kh, &ru_hard,  B2, B3,    RU)
-
-ZMK_COMBO(game_tog_34,      &tog GAME,         LH1 RH1,   BASE GAME) 
