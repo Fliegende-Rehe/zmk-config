@@ -135,5 +135,9 @@ layers:
 combos:
 - p: [5, 0]
   k: {t: sys, h: '$$mdi:toggle-switch$$'}
+  a: top
+  o: 0.5
 - p: [6, 11]
   k: {t: sys, h: '$$mdi:toggle-switch$$'}
+  a: top
+  o: 0.5

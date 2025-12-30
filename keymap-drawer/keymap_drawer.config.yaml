@@ -401,6 +401,9 @@ parse_config:
   # draw_separate: true
   # hidden: true
   zmk_combos:
-    combo_language_tog:
-      align: bottom 
+    sys_left:
+      align: top 
+      o: 0.5
+    sys_right:
+      align: top 
       o: 0.5
