@@ -55,7 +55,7 @@ layers:
   - '%'
   - ^
   - '&'
-  - KP MULTIPLY
+  - '*'
   - (
   - )
   - $$mdi:backspace-outline$$
@@ -89,3 +89,51 @@ layers:
   - $$mdi:keyboard-return$$
   - {type: held}
   - $$mdi:apple-keyboard-option$$
+  sys:
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - $$mdi:usb-flash-drive-outline$$
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - $$mdi:usb-flash-drive-outline$$
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+combos:
+- p: [5, 0]
+  k: {t: sys, h: '$$mdi:toggle-switch$$'}
+- p: [6, 11]
+  k: {t: sys, h: '$$mdi:toggle-switch$$'}
