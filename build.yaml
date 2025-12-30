@@ -9,9 +9,9 @@
 # shield: [ "corne_left", "corne_right" ]
 include:
   - board: nice_nano_v2
-    shield: scoliosis_left rgbled_adapter
+    shield: scoliosis_left led_indicator
     artifact-name: scoliosis-left
 
   - board: nice_nano_v2
-    shield: scoliosis_right rgbled_adapter
+    shield: scoliosis_right led_indicator
     artifact-name: scoliosis-right

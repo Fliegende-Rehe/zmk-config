@@ -23,4 +23,3 @@ jobs:
       json_path: "boards/shields/${keyboard}"
       output_folder: "keymap-drawer"
       destination: "both"
-      footer_text: "scoliosis keymap"

@@ -1,0 +1,91 @@
+layout: {zmk_keyboard: scoliosis}
+layers:
+  default: ['$$mdi:keyboard-tab$$', q, w, e, r, t, y, u, i, o, p, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-control$$', a, s, d, f, g, h, j, k, l, ;, '''',
+    '$$mdi:apple-keyboard-shift$$', z, x, c, v, b, n, m, ',', ., /, ESC, '$$mdi:apple-keyboard-command$$', lower, '$$mdi:keyboard-space$$', '$$mdi:keyboard-return$$',
+    raise, '$$mdi:apple-keyboard-option$$']
+  lower:
+  - $$mdi:keyboard-tab$$
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - $$mdi:backspace-outline$$
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:close-thick$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:desktop-tower-monitor$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:laptop$$', type: sym_by_sym}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-right$$
+  - {type: held}
+  - {type: held}
+  - $$mdi:apple-keyboard-shift$$
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - $$mdi:apple-keyboard-command$$
+  - {type: held}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-return$$
+  - {type: held}
+  - $$mdi:apple-keyboard-option$$
+  raise:
+  - $$mdi:keyboard-tab$$
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - KP MULTIPLY
+  - (
+  - )
+  - $$mdi:backspace-outline$$
+  - $$mdi:apple-keyboard-control$$
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - \
+  - '`'
+  - $$mdi:apple-keyboard-shift$$
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - '~'
+  - $$mdi:apple-keyboard-command$$
+  - {type: held}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-return$$
+  - {type: held}
+  - $$mdi:apple-keyboard-option$$
