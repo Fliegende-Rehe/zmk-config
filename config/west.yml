@@ -1,6 +1,4 @@
 manifest:
-  defaults:
-    revision: v0.3.0
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -10,10 +8,12 @@ manifest:
       url-base: https://github.com/caksoylar
   projects:
     - name: zmk
+      revision: v0.3.0
       remote: zmkfirmware
       import: app/west.yml
 
     - name: zmk-rgbled-widget
+      revision: main
       remote: caksoylar
   self:
     path: config
