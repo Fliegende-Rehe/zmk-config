@@ -1,4 +1,4 @@
-#include "sofle.dtsi"
+#include "dongle_common.dtsi"
 
 / {
 	kscan0: kscan {
