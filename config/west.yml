@@ -32,5 +32,9 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
 
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3 # use 'v0.3' instead of 'main' if you use have pinned zmk to 'v0.3' or below
+
   self:
     path: config

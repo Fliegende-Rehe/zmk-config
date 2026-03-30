@@ -113,3 +113,16 @@ include:
   - board: seeeduino_xiao_ble
     shield: chonky_bois_dongle dongle_screen
     artifact-name: chonky-dongle/chonky-dongle-central
+
+  # ----------------------------- sofle58 ----------------------------
+  - board: nice_nano_v2
+    shield: sofle_left
+    artifact-name: sofle-dongle/sofle-dongle-left
+
+  - board: nice_nano_v2
+    shield: sofle_right
+    artifact-name: sofle-dongle/sofle-dongle-right
+
+  - board: nice_nano_v2
+    shield: dongle_nice dongle_display
+    artifact-name: sofle-dongle/sofle-dongle-central

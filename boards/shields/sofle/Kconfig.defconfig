@@ -1,20 +1,33 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SOFLE_LEFT
+if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT || SHIELD_SHIELD_DONGLE_NICE
 
-config ZMK_KEYBOARD_NAME
-    default "Sofle"
+config ZMK_SPLIT
+    default y
+
+config ZMK_BLE
+    default y
+
+endif # SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT || SHIELD_SHIELD_DONGLE_NICE
+
+
+if SHIELD_SHIELD_DONGLE_NICE || SHIELD_SOFLE_LEFT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif
+if ZMK_SPLIT_ROLE_CENTRAL
+
+config ZMK_KEYBOARD_NAME
+    default "Sofle"
+
+endif # ZMK_SPLIT_ROLE_CENTRAL
+
+endif # SHIELD_SOFLE_LEFT || SHIELD_SHIELD_DONGLE_NICE
+
 
 if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
-
-config ZMK_SPLIT
-    default y
 
 if ZMK_DISPLAY
 
@@ -25,6 +38,10 @@ config SSD1306
     default y
 
 endif # ZMK_DISPLAY
+
+
+
+
 
 if LVGL
 
@@ -42,5 +59,8 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+
+
 
 endif
