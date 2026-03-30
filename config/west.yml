@@ -16,6 +16,9 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
 
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+
   projects:
     - name: zmk
       remote: zmkfirmware
