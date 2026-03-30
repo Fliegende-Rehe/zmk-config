@@ -3,3 +3,21 @@
 &default_transform {
     col-offset = <6>;
 };
+
+&default_kscan {
+    col-gpios
+        = <&gpio1 15 GPIO_ACTIVE_HIGH> // 
+        , <&gpio1 11 GPIO_ACTIVE_HIGH> // u
+        , <&gpio0 31 GPIO_ACTIVE_HIGH> // l
+        , <&gpio0 29 GPIO_ACTIVE_HIGH> // 
+        , <&gpio1 13 GPIO_ACTIVE_HIGH> // win
+        , <&gpio0 02 GPIO_ACTIVE_HIGH> // 
+        ; 
+
+    row-gpios
+        = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+        , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+        , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+        , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+        ;   
+};

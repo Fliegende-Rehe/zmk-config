@@ -63,4 +63,4 @@ ZMK_COMBO(game_N4,        &kp N4,       LB1 LB0,    GAME)
 
 // tog combo
 ZMK_COMBO(language_tog,   &tog RU,      LH0 RH0,    BASE)  
-MIRROR_COMBO(systog,      &tog SYS,     T0, T4,     BASE SYS)
+MIRROR_COMBO(systog,      &sl SYS,     T0, T4,     BASE SYS)
