@@ -1,0 +1,3 @@
+name: sofle-config
+append:
+  EXTRA_CONF_FILE: sofle-config.conf

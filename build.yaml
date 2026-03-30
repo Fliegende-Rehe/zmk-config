@@ -117,10 +117,13 @@ include:
   # ----------------------------- sofle58 ----------------------------
   - board: nice_nano_v2
     shield: sofle_left
+    snippet: sofle-config
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: sofle-dongle/sofle-dongle-left
 
   - board: nice_nano_v2
     shield: sofle_right
+    snippet: sofle-config
     artifact-name: sofle-dongle/sofle-dongle-right
 
   - board: nice_nano_v2
