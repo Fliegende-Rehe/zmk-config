@@ -124,5 +124,5 @@ include:
     artifact-name: sofle-dongle/sofle-dongle-right
 
   - board: nice_nano_v2
-    shield: dongle_nice dongle_display
+    shield: sofle_dongle dongle_display
     artifact-name: sofle-dongle/sofle-dongle-central
