@@ -121,10 +121,10 @@
         ADJ {
             display-name = "ADJ";
             bindings = <
-&out OUT_TOG    &none  &bootloader        &ext_power EP_TOG     &studio_unlock       &none                      &none      &studio_unlock      &ext_power EP_TOG      &bootloader         &none     &out OUT_TOG
+&out OUT_BLE    &none  &bootloader        &ext_power EP_TOG     &studio_unlock       &none                      &none      &studio_unlock      &ext_power EP_TOG      &bootloader         &none     &out OUT_USB
 &none           &none  &rgb_ug RGB_BRD    &rgb_ug RGB_TOG       &rgb_ug RGB_BRI      &none                      &none      &rgb_ug RGB_BRD     &rgb_ug RGB_TOG        &rgb_ug RGB_BRI     &none     &none
 &none           &none  &none              &none                 &none                &none                      &none      &none               &none                  &none               &none     &none
-&tog ADJ        &none  &bt BT_SEL 0       &bt BT_CLR            &bt BT_SEL 1         &none    &none    &none    &none      &bt BT_SEL 0        &bt BT_CLR             &bt BT_SEL 1        &none     &tog ADJ
+&tog ADJ        &none  &bt BT_SEL 0       &bt BT_CLR            &bt BT_SEL 1         &none    &none    &none    &none      &bt BT_SEL 1        &bt BT_CLR             &bt BT_SEL 0        &none     &tog ADJ
                        &none              &none                 &none                &none    &none    &none    &none      &none               &none                  &none
             >;
         };
