@@ -1,0 +1,201 @@
+﻿layout: {zmk_keyboard: sofle}
+layers:
+  BASE:
+  - ESC
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '~'
+  - $$mdi:keyboard-tab$$
+  - q
+  - w
+  - e
+  - r
+  - t
+  - y
+  - u
+  - i
+  - o
+  - p
+  - ']'
+  - $$mdi:apple-keyboard-shift$$
+  - a
+  - s
+  - d
+  - f
+  - g
+  - h
+  - j
+  - k
+  - l
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-control$$
+  - z
+  - x
+  - c
+  - v
+  - b
+  - $$mdi:volume-mute$$
+  - $$mdi:play-pause$$
+  - n
+  - m
+  - ','
+  - .
+  - {t: /, h: '$$mdi:gesture-double-tap$$', s: \, type: sym_by_sym}
+  - {t: '[', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-command$$
+  - '-'
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:keyboard-return$$', h: NAV}
+  - $$mdi:backspace-outline$$
+  - $$mdi:apple-keyboard-option$$
+  - '='
+  - $$mdi:apple-keyboard-command$$
+  NAV:
+  - $$mdi:gamepad-variant$$
+  - {t: F1, h: '$$mdi:gesture-double-tap$$', s: F11, type: sym_by_sym}
+  - {t: F2, h: '$$mdi:gesture-double-tap$$', s: F12, type: sym_by_sym}
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - $$mdi:gamepad-variant$$
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - '='
+  - ''
+  - $$mdi:magnify-minus$$
+  - $$mdi:arrow-up$$
+  - $$mdi:magnify-plus$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - '*'
+  - ''
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
+  - ''
+  - ''
+  - {t: ADJ, h: '$$mdi:toggle-switch$$'}
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - /
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ADJ, h: '$$mdi:toggle-switch$$'}
+  - '0'
+  - '-'
+  - +
+  - ','
+  - {type: held}
+  - {type: held}
+  - ''
+  - INS
+  - MENU
+  - NUM
+  ADJ:
+  - OUT TOG
+  - ''
+  - $$mdi:usb-flash-drive-outline$$
+  - $$mdi:power-plug-battery$$
+  - $$mdi:android-studio$$
+  - ''
+  - ''
+  - $$mdi:android-studio$$
+  - $$mdi:power-plug-battery$$
+  - $$mdi:usb-flash-drive-outline$$
+  - ''
+  - OUT TOG
+  - ''
+  - ''
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - $$mdi:lightbulb-off-outline$$
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+  - ''
+  - ''
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - $$mdi:lightbulb-off-outline$$
+  - {t: '$$mdi:lightbulb-on-outline$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ADJ, h: '$$mdi:toggle-switch$$'}
+  - ''
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:desktop-tower-monitor$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:close-thick$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:laptop$$', type: sym_by_sym}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:desktop-tower-monitor$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:close-thick$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth$$', s: '$$mdi:laptop$$', type: sym_by_sym}
+  - ''
+  - {t: ADJ, h: '$$mdi:toggle-switch$$'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  GAME: ['$$mdi:gamepad-variant$$', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '$$mdi:gamepad-variant$$', '6', '$$mdi:keyboard-tab$$', q, w, e, r, t, y, u,
+    i, o, ']', '7', '$$mdi:apple-keyboard-shift$$', a, s, d, f, g, h, j, k, l, '''', '8', '$$mdi:apple-keyboard-control$$', z, x, c, v, '$$mdi:volume-mute$$', '$$mdi:play-pause$$',
+    b, n, '$$mdi:arrow-up$$', ',', ., '[', F5, F6, '9', '$$mdi:apple-keyboard-option$$', '$$mdi:keyboard-space$$', '$$mdi:keyboard-return$$', '$$mdi:gamepad-variant$$',
+    '$$mdi:arrow-left$$', '$$mdi:arrow-down$$', '$$mdi:arrow-right$$']
+combos:
+- p: [31, 32, 33]
+  k: ESC
+  l: [BASE, GAME]
+  a: bottom
+- p: [26, 27, 28]
+  k: ESC
+  l: [BASE]
+  a: bottom
+- p: [54, 55]
+  k: Sft+$$mdi:apple-keyboard-option$$
+  l: [BASE]
