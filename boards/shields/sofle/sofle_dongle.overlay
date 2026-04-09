@@ -4,6 +4,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
+        wakeup-source;
     };
 
     mock_kscan: kscan_1 {
