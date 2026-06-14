@@ -46,16 +46,16 @@ include:
   #   snippet: common-config
   #   artifact-name: totem/totem-right
 
-  # # ----------------------------- chonky34 ----------------------------
-  # - board: nice_nano_v2
-  #   shield: chonky_bois_left led_indicator
-  #   snippet: common-config
-  #   artifact-name: chonky/chonky-left
+  # ----------------------------- chonky34 ----------------------------
+  - board: nice_nano_v2
+    shield: chonky_bois_left led_indicator
+    snippet: common-config
+    artifact-name: chonky/chonky-left
 
-  # - board: nice_nano_v2
-  #   shield: chonky_bois_right led_indicator
-  #   snippet: common-config
-  #   artifact-name: chonky/chonky-right
+  - board: nice_nano_v2
+    shield: chonky_bois_right led_indicator
+    snippet: common-config
+    artifact-name: chonky/chonky-right
 
   # ----------------------------- sofle58 ----------------------------
   - board: nice_nano_v2
@@ -98,21 +98,21 @@ include:
   #   shield: totem_dongle dongle_screen
   #   artifact-name: totem-dongle/totem-dongle-central
 
-  # # ----------------------------- chonky34 dongle ---------------------
-  # - board: nice_nano_v2
-  #   shield: chonky_bois_left
-  #   snippet: common-config
-  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  #   artifact-name: chonky-dongle/chonky-dongle-left
+  # ----------------------------- chonky34 dongle ---------------------
+  - board: nice_nano_v2
+    shield: chonky_bois_left
+    snippet: common-config
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: chonky-dongle/chonky-dongle-left
 
-  # - board: nice_nano_v2
-  #   shield: chonky_bois_right
-  #   snippet: common-config
-  #   artifact-name: chonky-dongle/chonky-dongle-right
+  - board: nice_nano_v2
+    shield: chonky_bois_right
+    snippet: common-config
+    artifact-name: chonky-dongle/chonky-dongle-right
 
-  # - board: seeeduino_xiao_ble
-  #   shield: chonky_bois_dongle dongle_screen
-  #   artifact-name: chonky-dongle/chonky-dongle-central
+  - board: seeeduino_xiao_ble
+    shield: chonky_bois_dongle dongle_screen
+    artifact-name: chonky-dongle/chonky-dongle-central
 
   # ----------------------------- sofle58 ----------------------------
   - board: nice_nano_v2
