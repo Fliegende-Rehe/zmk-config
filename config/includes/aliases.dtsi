@@ -49,7 +49,7 @@
 
 #define HMR_CTRL(KEY)   &hmr RCTRL KEY
 #define HMR_SHFT(KEY)   &hmr RSHFT KEY
-#define HMR_ALT(KEY)    &hmr LALT  KEY 
+#define HMR_ALT(KEY)    &hmr RALT  KEY 
 #define HMR_GUI(KEY)    &hmr RGUI  KEY
 
 // unicode home row mode (RU)
