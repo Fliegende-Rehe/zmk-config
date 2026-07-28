@@ -1,7 +1,9 @@
+#include <behaviors/rgbled_widget.dtsi>
+
 #define ZMK_RU_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)     \
     ZMK_LAYER(                                                  \
         name,                                                    \
-                    &kp ESC     LT  RT     &kp ESC                \
+                    &none     LT  RT       &none                  \
                     &kp HOME    LM  RM     &kp END                 \
                     &ru_kh      LB  RB     &ru_hard                 \
                     &tog GAME   LH  RH     &tog GAME                 \
@@ -20,7 +22,7 @@
 #include "base.keymap"
 
 // extra combos for 42 layout
-MIRROR_COMBO(t4_42,    &kp HASH,       &kp STAR,     T4, T5,      SYM_COMBOS_LAYERS)
+MIRROR_COMBO(t4_42,    &kp ESC,        &kp ESC,     T4, T5,      SYM_COMBOS_LAYERS)
 MIRROR_COMBO(t3_42,    &kp EXCL,       &kp AT,       T3, T4,      SYM_COMBOS_LAYERS)
 MIRROR_COMBO(m4_42,    &kp PRCNT,      &kp CARET,    M4, M5,      SYM_COMBOS_LAYERS)  
 MIRROR_COMBO(b4_42,    &kp DLLR,       &kp AMPS,     B4, B5,      SYM_COMBOS_LAYERS)
