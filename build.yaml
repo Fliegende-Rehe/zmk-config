@@ -16,45 +16,45 @@ include:
   # ----------------------------- enki42 ---------------------------
   - board: seeeduino_xiao_ble
     shield: enki_left rgbled_adapter
-    snippet: common-config
+    snippet: ble-config
     artifact-name: enki/enki-left
 
   - board: seeeduino_xiao_ble
     shield: enki_right rgbled_adapter
-    snippet: common-config
+    snippet: ble-config
     artifact-name: enki/enki-right
 
   # # ----------------------------- scoliosis42 ---------------------------
   # - board: nice_nano_v2
-  #   shield: scoliosis_left led_indicator
-  #   snippet: common-config
+  #   shield: scoliosis_left rgbled_adapter
+  #   snippet: ble-config
   #   artifact-name: scoliosis/scoliosis-left
 
   # - board: nice_nano_v2
-  #   shield: scoliosis_right led_indicator
-  #   snippet: common-config
+  #   shield: scoliosis_right rgbled_adapter
+  #   snippet: ble-config
   #   artifact-name: scoliosis/scoliosis-right
 
   # # ----------------------------- totem38 ----------------------------
   # - board: seeeduino_xiao_ble
-  #   shield: totem_left led_indicator
-  #   snippet: common-config
+  #   shield: totem_left rgbled_adapter
+  #   snippet: ble-config
   #   artifact-name: totem/totem-left
 
   # - board: seeeduino_xiao_ble
-  #   shield: totem_right led_indicator
-  #   snippet: common-config
+  #   shield: totem_right rgbled_adapter
+  #   snippet: ble-config
   #   artifact-name: totem/totem-right
 
   # # ----------------------------- chonky34 ----------------------------
   # - board: nice_nano_v2
-  #   shield: chonky_bois_left led_indicator
-  #   snippet: common-config
+  #   shield: chonky_bois_left rgbled_adapter
+  #   snippet: ble-config
   #   artifact-name: chonky/chonky-left
 
   # - board: nice_nano_v2
-  #   shield: chonky_bois_right led_indicator
-  #   snippet: common-config
+  #   shield: chonky_bois_right rgbled_adapter
+  #   snippet: ble-config
   #   artifact-name: chonky/chonky-right
 
   # # ----------------------------- sofle58 ----------------------------
@@ -69,13 +69,12 @@ include:
   # # ----------------------------- enki42 dongle -----------------------
   # - board: seeeduino_xiao_ble
   #   shield: enki_left
-  #   snippet: common-config
-  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  #   snippet: dongle-config
   #   artifact-name: enki-dongle/enki-dongle-left
 
   # - board: seeeduino_xiao_ble
   #   shield: enki_right
-  #   snippet: common-config
+  #   snippet: dongle-config
   #   artifact-name: enki-dongle/enki-dongle-right
 
   # - board: seeeduino_xiao_ble
@@ -85,48 +84,44 @@ include:
   # # ----------------------------- totem38 dongle ----------------------
   # - board: seeeduino_xiao_ble
   #   shield: totem_left
-  #   snippet: common-config
-  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  #   snippet: dongle-config
   #   artifact-name: totem-dongle/totem-dongle-left
 
   # - board: seeeduino_xiao_ble
   #   shield: totem_right
-  #   snippet: common-config
+  #   snippet: dongle-config
   #   artifact-name: totem-dongle/totem-dongle-right
 
   # - board: seeeduino_xiao_ble
   #   shield: totem_dongle dongle_screen
   #   artifact-name: totem-dongle/totem-dongle-central
 
-  # # ----------------------------- chonky34 dongle ---------------------
-  # - board: nice_nano_v2
-  #   shield: chonky_bois_left
-  #   snippet: common-config
-  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  #   artifact-name: chonky-dongle/chonky-dongle-left
+  # ----------------------------- chonky34 dongle ---------------------
+  - board: nice_nano_v2
+    shield: chonky_bois_left
+    snippet: dongle-config
+    artifact-name: chonky-dongle/chonky-dongle-left
 
-  # - board: nice_nano_v2
-  #   shield: chonky_bois_right
-  #   snippet: common-config
-  #   artifact-name: chonky-dongle/chonky-dongle-right
+  - board: nice_nano_v2
+    shield: chonky_bois_right
+    snippet: dongle-config
+    artifact-name: chonky-dongle/chonky-dongle-right
 
-  # - board: seeeduino_xiao_ble
-  #   shield: chonky_bois_dongle dongle_screen
-  #   artifact-name: chonky-dongle/chonky-dongle-central
+  - board: seeeduino_xiao_ble
+    shield: chonky_bois_dongle dongle_screen
+    artifact-name: chonky-dongle/chonky-dongle-central
 
-  # # ----------------------------- sofle58 ----------------------------
-  # - board: nice_nano_v2
-  #   shield: sofle_left
-  #   snippet: sofle-config
-  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  #   artifact-name: sofle-dongle/sofle-dongle-left
+  # ----------------------------- sofle58 ----------------------------
+  - board: nice_nano_v2
+    shield: sofle_left
+    snippet: sofle-config
+    artifact-name: sofle-dongle/sofle-dongle-left
 
-  # - board: nice_nano_v2
-  #   shield: sofle_right
-  #   snippet: sofle-config
-  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  #   artifact-name: sofle-dongle/sofle-dongle-right
+  - board: nice_nano_v2
+    shield: sofle_right
+    snippet: sofle-config
+    artifact-name: sofle-dongle/sofle-dongle-right
 
-  # - board: nice_nano_v2
-  #   shield: sofle_dongle dongle_display
-  #   artifact-name: sofle-dongle/sofle-dongle-central
+  - board: nice_nano_v2
+    shield: sofle_dongle dongle_display
+    artifact-name: sofle-dongle/sofle-dongle-central
